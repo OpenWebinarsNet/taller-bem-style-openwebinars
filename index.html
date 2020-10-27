@@ -55,22 +55,22 @@
       </header>
       <article>
         <h3>Simple</h3>
-        <button>Button</button>
+        <button class="button">Button</button>
       </article>
 
       <article>
         <h3>Pill</h3>
-        <button>Button</button>
+        <button class="button button--pil">Button</button>
       </article>
 
       <article>
         <h3>Outline</h3>
-        <button>Button</button>
+        <button class="button button--outline">Button</button>
       </article>
 
       <article>
         <h3>Disabled</h3>
-        <button>Button</button>
+        <button class="button" disabled>Button</button>
       </article>
     </section>
 
@@ -82,17 +82,17 @@
       </header>
       <article>
         <h3>Success</h3>
-        <div role="alert">
-          <i class="fas fa-check"></i>
-          <p>Success Notification</p>
+        <div role="alert" class="notification notification--success">
+          <i class="fas fa-check notification__icon"></i>
+          <p class="notification__text">Success Notification</p>
         </div>
       </article>
 
       <article>
         <h3>Error</h3>
-        <div role="alert">
-          <i class="fas fa-times"></i>
-          <p>There was an error</p>
+        <div role="alert" class="notification notification--error">
+          <i class="fas fa-times notification__icon"></i>
+          <p class="notification__text">There was an error</p>
         </div>
       </article>
     </section>
@@ -105,12 +105,12 @@
       </header>
       <article class="sample">
         <h3>Simple</h3>
-        <input type="text" />
+        <input type="text" class="field" />
       </article>
 
       <article class="sample">
         <h3>Error</h3>
-        <input type="text" />
+        <input type="text" class="field field--has-error" />
       </article>
     </section>
   </body>

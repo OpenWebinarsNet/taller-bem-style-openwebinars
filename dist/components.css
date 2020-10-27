@@ -1,15 +1,74 @@
-body {
-  font-family: 'Open Sans', sans-serif;
+.button {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0.7em 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #4299e1;
+  color: #fff;
+}
+
+.button--pil {
+  border-radius: 30px;
+}
+
+.button--outline {
   background-color: #fff;
-  font-size: 100%;
+  color: #4299e1;
+  border: 1px solid #4299e1;
 }
 
-.sample {
-  padding: 2rem;
-  border: 1px solid #cbd5e0;
-  margin: 1rem 0;
+.button[disabled] {
+  background-color: #a0ccf0;
+  cursor: not-allowed;
 }
 
-.text--center {
-  text-align: center;
+.notification {
+  border-left: 4px solid transparent;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+}
+
+.notification__icon {
+  font-size: 1.1em;
+}
+
+.notification__text {
+  margin-left: 15px;
+}
+
+.notification--success {
+  border-color: green;
+}
+
+.notification--success .notification__icon,
+.notification--success .notification__text {
+  color: green;
+}
+
+.notification--error {
+  border-color: tomato;
+}
+
+.notification--error .notification__icon,
+.notification--error .notification__text {
+  color: tomato;
+}
+
+.field {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e2e8f0;
+}
+
+.field:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.4);
+}
+
+.field--has-error {
+  border-color: tomato;
 }

@@ -1,1 +1,96 @@
 // Code goes here
+
+.button {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0.7em 1.2em; // 11px 19px
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #4299e1;
+  color: #fff;
+
+  &--pil {
+    border-radius: 30px;
+  }
+
+  &--outline {
+    background-color: #fff;
+    color: #4299e1;
+    border: 1px solid #4299e1;
+  }
+
+  &[disabled] {
+    background-color: #a0ccf0;
+    cursor: not-allowed;
+  }
+}
+
+.notification {
+  $p: &;
+  border-left: 4px solid transparent;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  &__icon {
+    font-size: 1.1em;
+  }
+
+  &__text {
+    margin-left: 15px;
+  }
+
+  // Refactor usar parent selector
+  // usar @each
+
+  // $states: (
+  //   'success': green,
+  //   'error': tomato,
+  // );
+
+  // @each $stateName, $color in $states {
+  //   &--#{$stateName} {
+  //     border-color: $color;
+
+  //     #{$p}__icon,
+  //     #{$p}__text {
+  //       color: $color;
+  //     }
+  //   }
+  // }
+
+  &--success {
+    border-color: green;
+
+    .notification__icon,
+    .notification__text {
+      color: green;
+    }
+  }
+
+  &--error {
+    border-color: tomato;
+    .notification__icon,
+    .notification__text {
+      color: tomato;
+    }
+  }
+}
+
+.field {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e2e8f0;
+
+  &:focus {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.4);
+  }
+
+  &--has-error {
+    border-color: tomato;
+  }
+}
+
+// Outline phil button
